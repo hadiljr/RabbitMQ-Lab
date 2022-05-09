@@ -29,9 +29,6 @@ namespace Consumer.Infrastructure.RabbitMq
             var connectionFactory = new ConnectionFactory
             {
                 HostName = RABBIT_HOSTNAME,
-                //Port = 5672,
-                //UserName = "guest",
-                //Password = "guest",
                 DispatchConsumersAsync = true
             };
             var connection = connectionFactory.CreateConnection();
