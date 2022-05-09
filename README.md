@@ -21,10 +21,8 @@ Aplicação de laboratório simples com um microserviço produtor e outro consumidor
 ![](/RabbitMQ-Lab-Fluxo.drawio.png)
 
 ### Guia de Utilização
-Quando o Rabbit MQ estiver operacional, entrar com o login e senha padrão (guest,guest).
-
+Quando o Rabbit MQ estiver operacional, entrar com o login e senha padrão (guest,guest).  
 Criar uma nova queue com o nome consumer.lab, durable.
-Fazer o bind na exchange "amq.direct".
-
+Fazer o bind na exchange "amq.direct".  
 Caso queira utilizar outras exchanges ou queue, basta alterar as variaveis de ambiente no docker-compose.yml
 
