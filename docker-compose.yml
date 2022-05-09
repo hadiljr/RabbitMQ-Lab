@@ -1,0 +1,55 @@
+version: '3.4'
+
+services:
+
+  sqlServer:
+    image: mcr.microsoft.com/mssql/server:2019-CU15-ubuntu-20.04
+    container_name: 'sql_server'
+    environment:
+        SA_PASSWORD: "!1234Asdf"
+        ACCEPT_EULA: "Y"
+    ports:
+        - 1433:1433
+    networks:
+        - rabbitmq_go_net
+
+  producerapi:
+    image: ${DOCKER_REGISTRY-}producer.api
+    build:
+      context: .
+      dockerfile: src/Producer/Producer.Api/Dockerfile
+    environment:
+        RABBIT_HOSTNAME: "host.docker.internal"
+        EXCHANGE_NAME: "amq.direct"
+    networks:
+        - rabbitmq_go_net
+
+  consumer.api:
+    image: ${DOCKER_REGISTRY-}consumer.api
+    build:
+      context: .
+      dockerfile: src/Consumer/Consumer.Api/Dockerfile
+    environment:
+      RABBIT_HOSTNAME: "host.docker.internal"
+      QUEUE_NAME: "consumer.lab"
+    networks:
+        - rabbitmq_go_net
+
+  rabbitmq:
+    hostname: 'dev-rabbitmq'
+    image: rabbitmq:3-management-alpine
+    container_name: 'rabbitmq'
+    ports:
+        - 5672:5672
+        - 15672:15672
+    volumes:
+        - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
+        - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
+    networks:
+        - rabbitmq_go_net
+
+ 
+
+networks:
+  rabbitmq_go_net:
+    driver: bridge
