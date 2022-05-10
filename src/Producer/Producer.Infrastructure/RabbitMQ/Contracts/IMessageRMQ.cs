@@ -1,4 +1,4 @@
-﻿using Producer.Domain.Entities;
+﻿using Producer.Domain.MessageAggregate;
 
 namespace Producer.Infrastructure.RabbitMq.Contracts
 {

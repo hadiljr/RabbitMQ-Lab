@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Consumer.Domain.Entities
+namespace Consumer.Domain.MessageAggregate
 {
     public class Message
     {

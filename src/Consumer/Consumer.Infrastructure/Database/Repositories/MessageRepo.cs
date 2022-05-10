@@ -1,5 +1,4 @@
-﻿using Consumer.Domain.Contracts.Repositories;
-using Consumer.Domain.Entities;
+﻿using Consumer.Domain.MessageAggregate;
 using Consumer.Infrastructure.Database.Context;
 using System;
 using System.Collections.Generic;

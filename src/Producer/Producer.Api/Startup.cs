@@ -1,5 +1,3 @@
-using Application.Services;
-using Domain.Contracts.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -9,6 +7,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Producer.Api.Application.Services;
+using Producer.Domain.MessageAggregate;
 using Producer.Infrastructure.RabbitMq;
 using Producer.Infrastructure.RabbitMq.Contracts;
 using System;

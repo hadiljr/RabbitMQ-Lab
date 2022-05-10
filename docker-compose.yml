@@ -25,10 +25,10 @@ services:
         - rabbitmq_go_net
 
   consumer.api:
-    image: ${DOCKER_REGISTRY-}consumer.api
+    image: ${DOCKER_REGISTRY-}consumer.worker
     build:
       context: .
-      dockerfile: src/Consumer/Consumer.Api/Dockerfile
+      dockerfile: src/Consumer/Consumer.Worker/Dockerfile
     environment:
       RABBIT_HOSTNAME: "host.docker.internal"
       QUEUE_NAME: "consumer.lab"

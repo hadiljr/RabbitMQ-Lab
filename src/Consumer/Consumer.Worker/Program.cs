@@ -1,10 +1,9 @@
-using Consumer.Application.Services;
-using Consumer.Application.Workers;
-using Consumer.Domain.Contracts.Repositories;
-using Consumer.Domain.Contracts.Services;
+using Consumer.Domain.MessageAggregate;
 using Consumer.Infrastructure.Database.Context;
 using Consumer.Infrastructure.Database.Repositories;
 using Consumer.Infrastructure.RabbitMq;
+using Consumer.Worker.Application.Services;
+using Consumer.Worker.Application.Workers;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;

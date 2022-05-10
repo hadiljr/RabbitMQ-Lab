@@ -1,13 +1,11 @@
-﻿
-using Domain.Contracts.Services;
-using Producer.Domain.Entities;
+﻿using Producer.Domain.MessageAggregate;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Services
+namespace Producer.Api.Application.Services
 {
     public class ProducerMessageService : IProducerMessageService
     {

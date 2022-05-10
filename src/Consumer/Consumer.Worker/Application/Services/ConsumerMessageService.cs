@@ -1,14 +1,11 @@
-﻿
-using Consumer.Domain.Contracts.Repositories;
-using Consumer.Domain.Contracts.Services;
-using Consumer.Domain.Entities;
+﻿using Consumer.Domain.MessageAggregate;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Consumer.Application.Services
+namespace Consumer.Worker.Application.Services
 {
     public class ConsumerMessageService : IConsumerMessageService
     {

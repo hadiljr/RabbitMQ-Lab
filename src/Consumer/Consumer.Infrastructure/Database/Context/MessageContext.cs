@@ -1,4 +1,4 @@
-﻿using Consumer.Domain.Entities;
+﻿using Consumer.Domain.MessageAggregate;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

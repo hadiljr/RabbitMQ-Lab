@@ -1,5 +1,4 @@
-﻿using Consumer.Domain.Contracts.Services;
-using Consumer.Domain.Entities;
+﻿using Consumer.Domain.MessageAggregate;
 using Consumer.Infrastructure.RabbitMq;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -14,7 +13,7 @@ using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Consumer.Application.Workers
+namespace Consumer.Worker.Application.Workers
 {
     public class MessageReader : BackgroundService
     {
